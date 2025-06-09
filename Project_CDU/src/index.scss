@@ -44,6 +44,204 @@
 // #endregion mixins ---------------------------------------------------------------
 /*---------------------------------END VARIABLES---------------------------------*/
 
+/*---------------------------------TECHNICAL---------------------------------*/
+// #region вспомогательные классы-----------------------------------------------------
+    // очистить всю анимацию
+    .clear-animation {
+        transition: none !important;
+        transform: none !important;
+        animation: none !important;
+    }
+
+
+    // #region отступы---------------------------------------------------------------------
+        // #region margin-------
+            // отступы сверху--
+            .mt-sm {
+                margin-top: 0.6rem;
+            }
+
+
+            .mt,
+            .mt-md {
+                margin-top: 1rem;
+            }
+
+
+            .mt-lg {
+                margin-top: 1.75rem;
+            }
+
+
+            // --отступы сверху
+
+
+            // отступы снизу--
+            .mb-sm {
+                margin-bottom: 0.6rem;
+            }
+
+
+            .mb,
+            .mb-md {
+                margin-bottom: 1rem;
+            }
+
+
+            .mb-lg {
+                margin-bottom: 1.75rem;
+            }
+
+
+            // --отступы снизу
+
+
+            // отступы справа--
+            .mr-sm {
+                margin-right: 0.6rem;
+            }
+
+
+            .mr,
+            .mr-md {
+                margin-right: 1rem;
+            }
+
+
+            .mr-lg {
+                margin-right: 1.75rem;
+            }
+
+
+            // --отступы справа
+
+
+            // отступы везде--
+            .m-sm {
+                margin: 0.6rem;
+            }
+
+
+            .m,
+            .m-md {
+                margin: 1rem;
+            }
+
+
+            .m-lg {
+                margin: 1.75rem;
+            }
+
+
+            // --отступы везде
+        // #endregion margin-------
+
+
+        // #region padding-----
+            /* отступы сверху */
+            .pt-sm {
+                padding-top: 0.6rem;
+            }
+
+
+            .pt,
+            .pt-md {
+                padding-top: 1rem;
+            }
+
+
+            .pt-lg {
+                padding-top: 1.75rem;
+            }
+
+
+            /* отступы снизу */
+            .pb-sm {
+                padding-bottom: 0.6rem;
+            }
+
+
+            .pb,
+            .pb-md {
+                padding-bottom: 1rem;
+            }
+
+
+            .pb-lg {
+                padding-bottom: 1.75rem;
+            }
+
+
+            /* отступы справа */
+            .pr-sm {
+                padding-right: 0.6rem;
+            }
+
+
+            .pr,
+            .mr-md {
+                padding-right: 1rem;
+            }
+
+
+            .pr-lg {
+                padding-right: 1.75rem;
+            }
+
+
+            /* отступы вокруг */
+            .p-vsm {
+                padding: 0.2rem;
+            }
+
+
+            .p-sm {
+                padding: 0.6rem;
+            }
+
+
+            .p,
+            .p-md {
+                padding: 1rem;
+            }
+
+
+            .p-lg {
+                padding: 1.75rem;
+            }
+
+
+        // #endregion padding-----
+    // #endregion отступы---------------------------------------------------------------------
+
+
+    // #region размер шрифта--------------------------------------------------------------------
+        .t-vsm {
+            font-size: 0.75rem; // 12px (очень маленький)
+        }
+
+
+        .t-sm {
+            font-size: 0.875rem; // 14px (маленький)
+        }
+
+
+        .t-md {
+            font-size: 1rem; // 16px (стандартный)
+        }
+
+
+        .t-lg {
+            font-size: 1.125rem; // 18px (крупный)
+        }
+
+
+        .t-vlg {
+            font-size: 1.25rem; // 20px (очень крупный)
+        }
+    // #endregion размер шрифта--------------------------------------------------------------------
+// #endregion вспомогательные классы-----------------------------------------------------
+/*---------------------------------END TECHNICAL---------------------------------*/
 
 *, *::after, *::before {
     margin: 0;
