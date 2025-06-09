@@ -1,15 +1,41 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+// светлая тема
+body {
+    --bg-color: #E0FFFF; //фон
+    --main-text: #333333; // основной текст
+    --div-text: #FFFFFF; // цвет текста на шапках блоков
+    --button-illum: #8CB5FF; // кнопки подсветка
+    --div-hat: #6495ED; //хидер/футер/шапки блоков
+    --div-bg: #E9E4E4; //блоки
+    --text-red: #FF0000; //выделение текста красным
+    --text-title: #FDA638; //текст в заголовках
+    --text-blue: #333399; //выделение текста синим
+}
+
+// темная тема
+.dark-theme {
+    --bg-color: #313030; //фон
+    --main-text: #000000; // основной текст
+    --div-text: #FFFFFF; // цвет текста на шапках блоков
+    --button-illum: #4888FB; // кнопки подсветка
+    --div-hat: #5E77A3; //хидер/футер/шапки блоков
+    --div-bg: #D7D7D7; //блоки
+    --text-red: #FF0000; //выделение текста красным
+    --text-title: #FF8E00; //текст в заголовках
+    --text-blue: #333399; //выделение текста синим
+}
+
+header {
+    width: 100%;
+    background-color: var(--div-hat);
+}
+
+footer {
+    width: 100%;
+    background-color: var(--div-hat);
+}
