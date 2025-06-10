@@ -241,13 +241,28 @@
         }
     // #endregion размер шрифта--------------------------------------------------------------------
 // #endregion вспомогательные классы-----------------------------------------------------
-/*---------------------------------END TECHNICAL---------------------------------*/
 
 *, *::after, *::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+// задать заголовкам размеры
+h1 {
+    font-size: 5rem;
+}
+h2 {
+    font-size: 4rem;
+}
+
+// задать размер шрифта тексту
+p {
+    font-size: 20pt;    
+    color: var(--main-text);
+}
+/*---------------------------------END TECHNICAL---------------------------------*/
+
 
 // светлая тема
 body {
@@ -315,6 +330,7 @@ body {
         color: var(--div-text);
         padding: 10px;
         border: none;
+        font-size: 16pt;
 
         &:hover {
             background-color: var(--button-illum);
@@ -342,6 +358,12 @@ body {
         }
     }
 // #endregion Header
+
+// #region main
+    main {
+        margin: 2rem 3rem 2rem 3rem;
+    }
+// #endregion main
 
 // #region Footer
     footer {
