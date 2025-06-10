@@ -2,10 +2,12 @@ export default function ContainerTextInfo({titleText, colorfulText, text}) {
 
     return (
         <div className="container-text-info">
+            {/* заголовок */}
             <div>
                 <h2>{titleText}</h2>
             </div>
-            <div>
+            {/* основной текст */}
+            <div className="div-text-info">
                 <p>
                     <strong>{colorfulText}</strong> {`${text}`}
                 </p>
