@@ -279,12 +279,67 @@ body {
     header {
         width: 100%;
         background-color: var(--div-hat);
+        padding: 1rem;
+
+        // flex
+        display: flex;
+        flex-direction: row;
+
+        // кнопки навигации
+        nav  { 
+            flex: auto;
+            padding: 0 1rem 0 1rem;
+
+            // flex
+            display: flex;
+            align-items: center;
+            justify-items: end;
+
+            // список
+            ul {
+                margin-left: auto;
+                list-style: none;                
+
+                // flex
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 10px;
+            }
+        }
+    }
+
+    // кнопки навигации
+    .nav_button {
+        background-color: var(--div-hat);
+        color: var(--div-text);
+        padding: 10px;
+        border: none;
+
+        &:hover {
+            background-color: var(--button-illum);
+        }
     }
 
     // логотип
     #container-main-logo {
         // для изображения
-        @include _imgs(30%);
+        @include _imgs(4rem, 15px);
+    }
+
+    // кнокпа переключения темы
+    #container-night-theme-toggle {
+        margin-left: auto; // поместить вправо
+        background-color: var(--div-hat);
+        border-radius: 25px;
+        padding: 5px;
+
+        // фото переключения темы
+        @include _imgs_no_border(4rem);
+
+        &:hover {
+            background-color: var(--button-illum);
+        }
     }
 // #endregion Header
 
