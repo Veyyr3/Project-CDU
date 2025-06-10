@@ -261,8 +261,6 @@ p {
     font-size: 20pt;    
     color: var(--main-text);
 }
-/*---------------------------------END TECHNICAL---------------------------------*/
-
 
 // светлая тема
 body {
@@ -289,6 +287,7 @@ body {
     --text-title: #FF8E00; //текст в заголовках
     --text-blue: #333399; //выделение текста синим
 }
+/*---------------------------------END TECHNICAL---------------------------------*/
 
 // #region Header
     header {
@@ -334,6 +333,7 @@ body {
 
         &:hover {
             background-color: var(--button-illum);
+            cursor: pointer;
         }
     }
 
@@ -362,6 +362,13 @@ body {
 // #region main
     main {
         margin: 2rem 3rem 2rem 3rem;
+    }
+
+    section {
+        // flex
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
     }
 // #endregion main
 

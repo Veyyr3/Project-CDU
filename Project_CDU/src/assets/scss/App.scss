@@ -32,3 +32,32 @@
         }
     }
 // #endregion информация
+
+// #region MainSection
+    // контейнер с двумя фото
+    .container-2-imgs {
+        width: 100%;
+
+        // flex 
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        // 1 фото
+        div:nth-child(1) {
+            width: 60%;
+        }
+
+        // 2 фото
+        div:nth-child(2) {
+            width: 40%;
+        }
+    }
+// #endregion MainSection
