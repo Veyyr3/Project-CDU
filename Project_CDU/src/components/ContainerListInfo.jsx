@@ -1,7 +1,7 @@
 export default function ContainerListInfo({titleText, list}) {
 
     return (
-        <div className="container-text-info">
+        <div className="container-info">
             {/* заголовок */}
             <div>
                 <h2>{titleText}</h2>
@@ -9,8 +9,11 @@ export default function ContainerListInfo({titleText, list}) {
             {/* список*/}
             <div className="div-list-info">
                 <ol>
-                    {list.map((i, index )=> (<li key={index}>{i}</li>)
-                    )}
+                    {list.map((i, index) => (
+                        <li key={index}>
+                            <p>{i}</p>
+                        </li>
+                    ))}
                 </ol>
             </div>
         </div>

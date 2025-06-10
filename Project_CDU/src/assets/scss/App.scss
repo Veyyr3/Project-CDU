@@ -1,7 +1,7 @@
 @use './index.scss';
 
-// #region информация
-    .container-text-info {
+// #region ContainerTextInfo, ContainerListInfo
+    .container-info {
         width: 100%;
         background-color: var(--div-bg);
 
@@ -20,7 +20,7 @@
             }
         }
 
-        // блок с основной текст
+        // блок с основной текст ContainerTextInfo
         .div-text-info {
             text-align: left;
             padding: 14px 22px 22px 22px;
@@ -29,6 +29,12 @@
             strong {
                 color: var(--text-blue);
             }
+        }
+
+        // блок список ContainerListInfo
+        .div-list-info {
+            text-align: left;
+            padding: 14px 22px 22px 22px;
         }
     }
 // #endregion информация

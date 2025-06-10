@@ -45,8 +45,18 @@ export default function MainSection() {
                 </div>
             </div>
 
+            {/* Блок Миссия */}
+            <ContainerTextInfo
+                titleText={i[1].titleText}
+                colorfulText={i[1].colorfulText}
+                text={i[1].text}
+            />
+
             {/* Блок список 1 */}
-            <ContainerListInfo titleText={j[0].titleText} list={j[0].list}/>
+            <ContainerListInfo titleText={j[0].titleText} list={j[0].list} />
+
+            {/* Блок список 2 */}
+            <ContainerListInfo titleText={j[1].titleText} list={j[1].list} />
         </section>
         // конец
     );

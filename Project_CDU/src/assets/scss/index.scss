@@ -1,4 +1,6 @@
 /*---------------------------------VARIABLES---------------------------------*/
+$font-size: 20pt; // размер шрифта
+
 // #region mixins---------------------------------------------------------------------
     // Миксин для картинок, изменяя их размер
     @mixin _imgs ($width, $border-radius: 25px, $border-width: 1px, $color: black, $border-type: solid) {
@@ -258,8 +260,32 @@ h2 {
 
 // задать размер шрифта тексту
 p {
-    font-size: 20pt;    
+    font-size: $font-size;
     color: var(--main-text);
+}
+
+// стиль для списков
+ul, ol {
+    list-style-position: inside; // чтобы цифры или точки не выходили за края
+    // list-style: none; // контроль
+
+    // элемент списка
+    li {
+        padding-left: 0;
+        list-style: none;
+
+        // flex
+        display: flex;
+        align-items: baseline;
+    }
+
+    // для маркеров списка
+    li::marker {
+        font-size: $font-size;
+        font-weight: bold;
+        color: var(--text-blue);
+        margin-right: 0.5em; // отступ после li
+    }
 }
 
 // светлая тема
