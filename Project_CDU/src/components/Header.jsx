@@ -20,6 +20,15 @@ export default function Header () {
                     <li>
                         <Button className="nav_button">Кружки</Button>
                     </li>
+                    <li>
+                        <Button className="nav_button">Проекты и конкурсы</Button>
+                    </li>
+                    <li>
+                        <Button className="nav_button">Галерея</Button>
+                    </li>
+                    <li>
+                        <Button className="nav_button">Контакты</Button>
+                    </li>
                 </ul>
             </nav>
 

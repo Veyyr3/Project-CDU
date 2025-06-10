@@ -17,7 +17,9 @@ function App() {
     return (
         <>
             <Header/>
-            <p>hi!</p>
+            <main>
+                
+            </main>
             <Footer/>
         </>
     )
