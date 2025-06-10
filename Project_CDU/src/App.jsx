@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./App.scss";
+import "./assets/scss/App.scss";
 
 // #region компоненты
 import Header from "./components/Header";

@@ -1,0 +1,20 @@
+// #region информация
+    .container-text-info {
+        width: 100%;
+        background-color: var();
+
+        // flex
+        display: flex;
+        flex-direction: column;
+
+        // заголовок
+        div:nth-child(1) {
+            text-align: center;
+        }
+
+        // основной текст
+        div:nth-child(2) {
+            text-align: center;
+        }
+    }
+// #endregion информация

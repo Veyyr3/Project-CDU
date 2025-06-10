@@ -9,6 +9,8 @@ export default function MainSection() {
         <section>
             {/* Приветствие */}
             <ContainerTextInfo key={i[0].id} titleText={i[0].titleText} colorfulText={i[0].colorfulText} text={i[0].text}/>
+
+            {/* блок с фото */}
         </section>
     );
 }
