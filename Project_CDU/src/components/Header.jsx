@@ -1,9 +1,10 @@
+import { useState } from 'react';
 import logo from '../assets/Images/Logo.png'
 import night_theme_button from "../assets/Images/night_theme_icon.png";
 import Button from './Button'
 
-export default function Header () {
-
+export default function Header ({setTargetPage}) {
+    
     return (
         <header>
             {/* логотип */}
@@ -15,16 +16,36 @@ export default function Header () {
             <nav>
                 <ul>
                     <li>
-                        <Button className="nav_button">Главная</Button>
+                        <Button
+                            className="nav_button"
+                            onClick={() => setTargetPage("main")}
+                        >
+                            Главная
+                        </Button>
                     </li>
                     <li>
-                        <Button className="nav_button">Кружки</Button>
+                        <Button
+                            className="nav_button"
+                            onClick={() => setTargetPage("mugs")}
+                        >
+                            Кружки
+                        </Button>
                     </li>
                     <li>
-                        <Button className="nav_button">Проекты и конкурсы</Button>
+                        <Button
+                            className="nav_button"
+                            onClick={() => setTargetPage("projects")}
+                        >
+                            Проекты и конкурсы
+                        </Button>
                     </li>
                     <li>
-                        <Button className="nav_button">Галерея</Button>
+                        <Button
+                            className="nav_button"
+                            onClick={() => setTargetPage("gallery")}
+                        >
+                            Галерея
+                        </Button>
                     </li>
                     <li>
                         <Button className="nav_button">Контакты</Button>

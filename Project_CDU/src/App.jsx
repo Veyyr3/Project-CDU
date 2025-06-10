@@ -14,12 +14,19 @@ import GallerySection from "./sections/GallerySection";
 // #endregion секции
 
 function App() {
+    const [targetPage, setTargetPage] = useState("main"); // изменять целевую страницу
+
     return (
         <>
-            <Header/>
+            <Header setTargetPage={setTargetPage}/>
+
             <main>
-                
+                {targetPage === "main" && <MainSection />}
+                {targetPage === "mugs" && <MugsSection />}
+                {targetPage === "projects" && <ProjectSection />}
+                {targetPage === "gallery" && <GallerySection />}
             </main>
+
             <Footer/>
         </>
     )
