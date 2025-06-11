@@ -1,3 +1,11 @@
+// #region фото
+    // кружки
+    import imgDraw from "./assets/Images/mugs_section/mugs_section_draw.jpg";
+
+    // учителя
+    import imgDrawTeacher from "./assets/Images/mugs_section/teachers/draw-teacher.jpg";
+// #endregion фото
+
 const text_for_container_text_info = [
     {
         titleText: "Добро пожаловать!",
@@ -35,9 +43,8 @@ const text_for_container_list_info = [
 
 const text_for_container_mugs_teacher = [
     {
-        imgMugSrc: "../assets/Images/mugs_section/mugs_section_draw.jpg",
-        imgTeacherSrc:
-            "../assets/Images/mugs_section/teachers/draw-teacher.jpg",
+        imgMugSrc: imgDraw,
+        imgTeacherSrc: imgDrawTeacher,
         titleMug: "РИСОВАНИЕ",
         titleTeacher: "Романова Е.В.",
         discMug:
