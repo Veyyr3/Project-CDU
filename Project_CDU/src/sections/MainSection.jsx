@@ -27,7 +27,7 @@ export default function MainSection() {
 
     return (
         // начало
-        <main>
+        <section>
             {/* Блок Приветствие */}
             <ContainerTextInfo
                 titleText={i[0].titleText}
@@ -57,7 +57,7 @@ export default function MainSection() {
 
             {/* Блок список 2 */}
             <ContainerListInfo titleText={j[1].titleText} list={j[1].list} />
-        </main>
+        </section>
         // конец
     );
 }
