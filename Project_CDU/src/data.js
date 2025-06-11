@@ -6,6 +6,7 @@
     import imgDrawTeacher from "./assets/Images/mugs_section/teachers/draw-teacher.jpg";
 // #endregion фото
 
+// текст для текстовой информации на сайте
 const text_for_container_text_info = [
     {
         titleText: "Добро пожаловать!",
@@ -20,6 +21,7 @@ const text_for_container_text_info = [
     },
 ];
 
+// текст для списка информации на сайте
 const text_for_container_list_info = [
     {
         titleText: "Наши цели:",
@@ -41,6 +43,7 @@ const text_for_container_list_info = [
     },
 ];
 
+// текст для кржуков и учителей
 const text_for_container_mugs_teacher = [
     {
         imgMugSrc: imgDraw,

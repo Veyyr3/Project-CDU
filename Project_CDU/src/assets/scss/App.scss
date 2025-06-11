@@ -74,62 +74,26 @@
         width: 100%;
         color: var(--div-text);
 
-        // flex
-        display: flex;
-        flex-direction: column;
+        // grid
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: minmax(150px, 600px) auto;
         gap: 10px;
     }
 
-    // общий контейнер фото кружков и учителей
-    .container-imgs {
-        // flex
-        display: flex;
-        flex-direction: row;
-    }
-
-    // для контейнера с фото кружков
-    .container-img-mug {
-        width: 60%;
+    // для контейнера с фото кружков и учителей
+    .container-img-mug-teacher {
+        overflow: hidden;
 
         img {
+            display: block;
             width: 100%;
             height: 100%;
         }
     }
 
-    // для контейнера c фото учителей
-    .container-img-teacher {
-        width: 40%;
-
-        img {
-            width: 100%;
-            height: 100%;
-        }
-    }
-
-    // общий контейнер с подписи для кружков и учителей
-    .container-titles-for-imgs {
-        // flex
-        display: flex;
-        flex-direction: row;
-    }
-
-    // контейнер для подписи кружков
-    .container-title-imgs-mug {
-        background-color: var(--div-hat);
-        text-align: center;
-        width: 60%;
-    }
-
-    // контейнер для подписи учителей
-    .container-title-imgs-teacher {
-        background-color: var(--div-hat);
-        text-align: center;
-        width: 40%;
-    }
-
-    // контейнер для подписей учителей и кружков
-    .container-title-imgs {
+    // контейнер для подписи кружков и учителей
+    .container-title-for-imgs-mug-teacher {
         background-color: var(--div-hat);
         text-align: center;
     }
