@@ -48,7 +48,7 @@ const text_for_container_mugs_teacher = [
     {
         imgMugSrc: imgDraw,
         imgTeacherSrc: imgDrawTeacher,
-        titleMug: "РИСОВАНИЕ",
+        titleMug: "Рисование",
         titleTeacher: "Романова Е.В.",
         discMug:
             "Откройте мир цвета и формы! Наши курсы рисования помогут освоить различные техники, от акварели до графики.",

@@ -69,6 +69,11 @@
 // #endregion MainSection
 
 // #region ContainerMugsTeacher
+    // #region VARIABLES------------------------
+        $_time_for_animation: 0.4s;
+    // #endregion VARIABLES------------------------
+
+
     // главный контейнер для фотографий и подписи к ним
     .main-container-imgs-titles {
         width: 100%;
@@ -83,12 +88,38 @@
 
     // для контейнера с фото кружков и учителей
     .container-img-mug-teacher {
-        overflow: hidden;
-
+        // для фото
         img {
             display: block;
             width: 100%;
             height: 100%;
+        }
+    }
+
+    // контейнер с фото кружка
+    .container-img--mug {
+        position: relative;
+
+        // при наведении показать скрытое описание
+        &:hover .container-hiden-discription--mug {
+            opacity: 1;
+            background-color: rgba(0, 0, 0, 0.7);
+            transform: translateY(0); 
+        }
+    }
+
+    // контейнер с фото учителя
+    .container-img--teacher {
+        position: relative;
+
+        // при наведении показать скрытое описание
+        &:hover .container-hiden-discription--teacher {
+            opacity: 1;
+            background-color: rgba(0, 0, 0, 0.7);
+
+            p {
+                transform: translateY(0);
+            }
         }
     }
 
@@ -99,7 +130,41 @@
     }
 
     // спрятать описания картинок
-    .container-hiden-discription-mug, .container-hiden-discription-teacher {
-        display: none;
+    .container-hiden-discription--mug, .container-hiden-discription--teacher {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0; // спрятать
+        text-align: center;
+        top: 0;
+        left: 0;
+
+        // анимация
+        transition: opacity 0.3s ease, background-color 0.3s ease;
+
+        // flex для текста
+        display: flex;
+        justify-items: center;
+        align-items: center;
+
+        // для текстов
+        p {
+            text-align: justify;
+            color: var(--div-text);
+            
+            // анимация
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+        }
+    }
+
+    // отдельно текст для кружков
+    .container-hiden-discription--mug p {
+        padding: 100px; 
+    }
+
+    // отдельно текст для учителей
+    .container-hiden-discription--teacher p {
+        padding: 30px;
     }
 // #endregion ContainerMugsTeacher
