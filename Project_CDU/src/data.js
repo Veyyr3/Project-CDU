@@ -33,4 +33,22 @@ const text_for_container_list_info = [
     },
 ];
 
-export { text_for_container_text_info, text_for_container_list_info };
+const text_for_container_mugs_teacher = [
+    {
+        imgMugSrc: "../assets/Images/mugs_section/mugs_section_draw.jpg",
+        imgTeacherSrc:
+            "../assets/Images/mugs_section/teachers/draw-teacher.jpg",
+        titleMug: "РИСОВАНИЕ",
+        titleTeacher: "Романова Е.В.",
+        discMug:
+            "Откройте мир цвета и формы! Наши курсы рисования помогут освоить различные техники, от акварели до графики.",
+        discTeacher:
+            " Елена Викторовна — талантливый художник и педагог с более чем 10-летним опытом работы с детьми. На её занятиях каждый ребёнок чувствует себя настоящим творцом! Она умеет найти подход к любому ученику, раскрывая его уникальный взгляд на мир через краски и линии. Елена Викторовна не просто учит рисовать, она вдохновляет на эксперименты, помогает развить воображение и мелкую моторику.",
+    },
+];
+
+export {
+    text_for_container_text_info,
+    text_for_container_list_info,
+    text_for_container_mugs_teacher,
+};
