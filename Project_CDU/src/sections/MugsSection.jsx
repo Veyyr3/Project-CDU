@@ -22,7 +22,7 @@ export default function MugsSection() {
         <section>
             {/* заголовок */}
             <div className="container-title">
-                <h2>Образовательные программы и преподаватели</h2>
+                <h3>Образовательные программы и преподаватели</h3>
             </div>
 
             {/* РИСОВАНИЕ */}
