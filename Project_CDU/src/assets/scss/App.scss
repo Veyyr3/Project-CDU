@@ -8,34 +8,34 @@
         // flex
         display: flex;
         flex-direction: column;
+    }
 
-        // блок с заголовок
-        div:nth-child(1) {
-            text-align: center;
-            padding: 8px 8px 0 8px;
+    // блок с заголовок
+    .container-title {
+        text-align: center;
+        padding: 8px 8px 0 8px;
 
-            // заголовок
-            h2 {
-                color: var(--text-title);
-            }
+        // заголовок
+        h2 {
+            color: var(--text-title);
         }
+    }
 
-        // блок с основной текст ContainerTextInfo
-        .div-text-info {
-            text-align: left;
-            padding: 14px 22px 22px 22px;
+    // блок с основной текст ContainerTextInfo
+    .div-text-info {
+        text-align: left;
+        padding: 14px 22px 22px 22px;
 
-            // цветной текст
-            strong {
-                color: var(--text-blue);
-            }
+        // цветной текст
+        strong {
+            color: var(--text-blue);
         }
+    }
 
-        // блок список ContainerListInfo
-        .div-list-info {
-            text-align: left;
-            padding: 14px 22px 22px 22px;
-        }
+    // блок список ContainerListInfo
+    .div-list-info {
+        text-align: left;
+        padding: 14px 22px 22px 22px;
     }
 // #endregion информация
 
