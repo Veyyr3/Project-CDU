@@ -264,27 +264,40 @@ p {
     color: var(--main-text);
 }
 
-// стиль для списков
+// стили списков
 ul, ol {
-    list-style-position: inside; // чтобы цифры или точки не выходили за края
-    // list-style: none; // контроль
+    list-style: none; // контроль для кастомных списков
 
-    // элемент списка
+    // Элемент списка
     li {
         padding-left: 0;
-        list-style: none;
 
         // flex
         display: flex;
-        align-items: baseline;
-    }
+        align-items: baseline; 
 
-    // для маркеров списка
-    li::marker {
-        font-size: $font-size;
-        font-weight: bold;
-        color: var(--text-blue);
-        margin-right: 0.5em; // отступ после li
+        // кастомные маркеры
+        &::before {
+            // вид маркеров
+            content: counter(list-item) ".";
+            counter-increment: list-item;
+
+            // Стили для самого маркера (цифры)
+            font-size: $font-size;
+            font-weight: bold;
+            color: var(--text-blue);
+
+            // стили
+            margin-right: 0.5em; // Отступ между marker и li
+            min-width: 1.5em; // минимальная ширина, чтобы не прыгал от многозначных цифр
+            text-align: right;
+        }
+
+        // текст
+        p {
+            margin: 0; // Убрать любые стандартные отступы у параграфов внутри li
+            flex-grow: 1; // Позволит параграфу занять оставшееся пространство
+        }
     }
 }
 
