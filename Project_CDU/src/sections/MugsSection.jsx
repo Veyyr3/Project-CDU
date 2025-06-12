@@ -19,28 +19,26 @@ export default function MugsSection() {
     const ilr = text_for_container_mugs_teacher;
 
     return (
-        <section>
+        <section className="container-info gap-20px p-lg">
             {/* заголовок */}
             <div className="container-title">
                 <h3>Образовательные программы и преподаватели</h3>
             </div>
 
-            <article className="container-info gap-20px p-lg">
-                {/* АВТОМАТИЗАЦИЯ картинки кружков и учителей и подписи к ним */}
-                {ilr.map((i, index) => {
-                    return (
-                        <ContainerMugsTeacher
-                            key={index}
-                            imgMugSrc={i.imgMugSrc}
-                            imgTeacherSrc={i.imgTeacherSrc}
-                            titleMug={i.titleMug}
-                            titleTeacher={i.titleTeacher}
-                            discMug={i.discMug}
-                            discTeacher={i.discTeacher}
-                        />
-                    );
-                })}
-            </article>
+            {/* АВТОМАТИЗАЦИЯ картинки кружков и учителей и подписи к ним */}
+            {ilr.map((i, index) => {
+                return (
+                    <ContainerMugsTeacher
+                        key={index}
+                        imgMugSrc={i.imgMugSrc}
+                        imgTeacherSrc={i.imgTeacherSrc}
+                        titleMug={i.titleMug}
+                        titleTeacher={i.titleTeacher}
+                        discMug={i.discMug}
+                        discTeacher={i.discTeacher}
+                    />
+                );
+            })}
         </section>
     );
 }
