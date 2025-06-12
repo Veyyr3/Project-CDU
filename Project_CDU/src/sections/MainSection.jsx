@@ -9,6 +9,8 @@
     import ContainerTextInfo from "../components/ContainerTextInfo";
     // компонент для списков
     import ContainerListInfo from "../components/ContainerListInfo"; 
+    // секция кружков
+    import MugsSection from "./MugsSection"
 // #endregion компоненты
 
 
@@ -57,6 +59,9 @@ export default function MainSection() {
 
             {/* Блок список 2 */}
             <ContainerListInfo titleText={j[1].titleText} list={j[1].list} />
+
+            {/* секция кружков */}
+            <MugsSection/>
         </section>
         // конец
     );
