@@ -28,7 +28,7 @@ export default function ContainerMugsTeacher({imgMugSrc, imgTeacherSrc, titleMug
             </div>
 
             {/* контейнер подписи учителей */}
-            <div className="container-title-for-imgs-mug-teacher">
+            <div className="container-title-for-imgs-mug-teacher" style={{margin: "0 10px"}}>
                 <h2>{titleTeacher}</h2>
             </div>
         </div>
