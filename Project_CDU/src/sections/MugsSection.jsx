@@ -25,15 +25,17 @@ export default function MugsSection() {
                 <h3>Образовательные программы и преподаватели</h3>
             </div>
 
-            {/* РИСОВАНИЕ */}
-            <ContainerMugsTeacher
-                imgMugSrc={i[0].imgMugSrc}
-                imgTeacherSrc={i[0].imgTeacherSrc}
-                titleMug={i[0].titleMug}
-                titleTeacher={i[0].titleTeacher}
-                discMug={i[0].discMug}
-                discTeacher={i[0].discTeacher}
-            />
+            <article>
+                {/* РИСОВАНИЕ */}
+                <ContainerMugsTeacher
+                    imgMugSrc={i[0].imgMugSrc}
+                    imgTeacherSrc={i[0].imgTeacherSrc}
+                    titleMug={i[0].titleMug}
+                    titleTeacher={i[0].titleTeacher}
+                    discMug={i[0].discMug}
+                    discTeacher={i[0].discTeacher}
+                />
+            </article>
         </section>
     );
 }

@@ -55,7 +55,11 @@ export default function Header ({setTargetPage}) {
 
             {/* переключить тему */}
             <div id="container-night-theme-toggle">
-                <img src={night_theme_button} alt="Переключить тему" />
+                <img
+                    src={night_theme_button}
+                    alt="Переключить тему"
+                    title="Переключить тему"
+                />
             </div>
         </header>
     );

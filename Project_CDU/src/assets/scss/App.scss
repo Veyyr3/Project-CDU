@@ -83,7 +83,7 @@
         display: grid;
         grid-template-columns: 60% 40%;
         grid-template-rows: minmax(150px, 600px) auto;
-        gap: 10px;
+        column-gap: 20px;
     }
 
     // для контейнера с фото кружков и учителей
@@ -104,7 +104,10 @@
         &:hover .container-hiden-discription--mug {
             opacity: 1;
             background-color: rgba(0, 0, 0, 0.7);
-            transform: translateY(0); 
+
+            p {
+                transform: translateY(0);
+            }
         }
     }
 
