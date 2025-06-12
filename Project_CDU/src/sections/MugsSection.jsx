@@ -19,7 +19,7 @@ export default function MugsSection() {
     const ilr = text_for_container_mugs_teacher;
 
     return (
-        <section className="container-info gap-20px p-lg">
+        <section className="container-info gap-20px p-lg" style={{paddingTop: '5px'}}>
             {/* заголовок */}
             <div className="container-title">
                 <h3>Образовательные программы и преподаватели</h3>
