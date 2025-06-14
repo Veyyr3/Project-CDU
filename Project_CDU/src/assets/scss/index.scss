@@ -719,9 +719,24 @@ body {
         // фото переключения темы
         @include _imgs_no_border(4rem);
 
+        img {
+            transition: transform 0.3s ease-in-out; /* Плавный переход для свойства transform */
+            transform-origin: center center; /* Точка вращения - центр изображения */
+        }
+
         &:hover {
             background-color: var(--button-illum);
         }
+    }
+
+    // чтобы фото внутри кнопки переключения темы вращалось (со светлой в темную)
+    .rotate-dark {
+        transform: rotate(180deg);
+    }
+
+    // с темной в светлую
+    .rotate-light {
+        transform: rotate(0deg);
     }
 
 // #endregion Header
