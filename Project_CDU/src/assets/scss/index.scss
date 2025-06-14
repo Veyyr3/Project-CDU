@@ -720,8 +720,8 @@ body {
         @include _imgs_no_border(4rem);
 
         img {
-            transition: transform 0.3s ease-in-out; /* Плавный переход для свойства transform */
-            transform-origin: center center; /* Точка вращения - центр изображения */
+            transition: transform 0.3s ease-in-out;
+            transform-origin: center center;
         }
 
         &:hover {
