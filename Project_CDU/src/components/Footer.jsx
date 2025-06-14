@@ -34,7 +34,7 @@ export default function Footer() {
                 <br />
                 {/* Карта */}
                 <YMaps modules={["geocode", "geoObjects"]}>
-                    <div id="container-yandex-map">
+                    <div id="container-yandex-map" className="isimage">
                         <Map
                             defaultState={{
                                 center: tokmokCoordinates,

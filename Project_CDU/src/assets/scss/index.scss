@@ -599,7 +599,7 @@ ul:not(nav ul), ol {
 
 // светлая тема
 body {
-    --bg-color: #E0FFFF; //фон
+    --bg-color: #edfafa; //фон
     --main-text: #333333; // основной текст
     --div-text: #FFFFFF; // цвет текста на шапках блоков
     --button-illum: #8CB5FF; // кнопки подсветка
@@ -609,6 +609,20 @@ body {
     --text-title: #FDA638; //текст в заголовках
     --text-blue: #333399; //выделение текста синим
     --container-line-aside-bg-color: #E0F2F7; // задний цвет для блока с линией в стороне
+
+    background-color: var(--bg-color);
+    transition: background-color 0.3s ease;
+
+    // для контейнеров плавная анимация переключения темы
+    header, footer, .container-info, .nav_button, .container-line-aside {
+        transition: background-color 0.3s ease;
+    }
+
+    // для всех фото
+    .isimage {
+        filter: brightness(1);
+        transition: filter 0.3s ease;
+    }
 }
 
 // темная тема
@@ -618,11 +632,25 @@ body {
     --div-text: #FFFFFF; // цвет текста на шапках блоков
     --button-illum: #4888FB; // кнопки подсветка
     --div-hat: #5E77A3; //хидер/футер/шапки блоков
-    --div-bg: #D7D7D7; //блоки
+    --div-bg: #B5B1B1; //блоки
     --text-red: #FF0000; //выделение текста красным
     --text-title: #FF8E00; //текст в заголовках
     --text-blue: #333399; //выделение текста синим
-    --container-line-aside-bg-color: #E0F2F7; // задний цвет для блока с линией в стороне
+    --container-line-aside-bg-color: #b9d0d6; // задний цвет для блока с линией в стороне
+
+    background-color: var(--bg-color);
+    transition: background-color 0.3s ease;
+
+    // для контейнеров плавная анимация переключения темы
+    header, footer, .container-info, .nav_button, .container-line-aside {
+        transition: background-color 0.3s ease;
+    }
+
+    // для всех фото
+    .isimage {
+        filter: brightness(0.8);
+        transition: filter 0.3s ease;
+    }
 }
 /*---------------------------------END TECHNICAL---------------------------------*/
 
@@ -686,6 +714,7 @@ body {
         background-color: var(--div-hat);
         border-radius: 25px;
         padding: 5px;
+        cursor: pointer;
 
         // фото переключения темы
         @include _imgs_no_border(4rem);
@@ -694,6 +723,7 @@ body {
             background-color: var(--button-illum);
         }
     }
+
 // #endregion Header
 
 // #region main

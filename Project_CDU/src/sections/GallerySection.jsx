@@ -7,19 +7,20 @@
 // #endregion фото
 
 export default function GallerySection() {
+    const imgSrcs = [img1, img2, img3, img4, img6] // список источников фото
 
     return (
         <section id="gallery-section" className="container-info">
             <div className="container-title">
-                <h3>Галерея</h3>
+                <h2>Галерея</h2>
             </div>
 
-            <div className='container-imgs'>
-                <img src={img1} alt="" />
-                <img src={img2} alt="" />
-                <img src={img3} alt="" />
-                <img src={img4} alt="" />
-                <img src={img6} alt="" />
+            <div className="container-imgs">
+                {/* автоматизация вывода фото */}
+                {imgSrcs.map((i, index)=> {
+                    return <img className="isimage" src={i} alt="" />;
+                })
+                }
             </div>
         </section>
     );

@@ -6,7 +6,7 @@ export default function ContainerMugsTeacher({imgMugSrc, imgTeacherSrc, titleMug
         <div className="main-container-imgs-titles">
             {/* контейнер для фото кружка */}
             <div className="container-img-mug-teacher container-img--mug">
-                <img src={imgMugSrc} alt="" />
+                <img className="isimage" src={imgMugSrc} alt="" />
                 {/* контейнер для краткого описания фото (изначально он невидим) */}
                 <div className="container-hiden-discription--mug">
                     <p>{discMug}</p>
@@ -15,7 +15,7 @@ export default function ContainerMugsTeacher({imgMugSrc, imgTeacherSrc, titleMug
 
             {/* контейнер для фото учителя */}
             <div className="container-img-mug-teacher container-img--teacher">
-                <img src={imgTeacherSrc} alt="" />
+                <img className="isimage" src={imgTeacherSrc} alt="" />
                 {/* контейнер для краткого описания фото (изначально он невидим) */}
                 <div className="container-hiden-discription--teacher">
                     <p>{discTeacher}</p>
@@ -28,7 +28,10 @@ export default function ContainerMugsTeacher({imgMugSrc, imgTeacherSrc, titleMug
             </div>
 
             {/* контейнер подписи учителей */}
-            <div className="container-title-for-imgs-mug-teacher" style={{margin: "0 10px"}}>
+            <div
+                className="container-title-for-imgs-mug-teacher"
+                style={{ margin: "0 10px" }}
+            >
                 <h2>{titleTeacher}</h2>
             </div>
         </div>

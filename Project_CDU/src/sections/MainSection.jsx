@@ -40,10 +40,10 @@ export default function MainSection() {
             {/* блок с фото */}
             <div className="container-2-imgs">
                 <div>
-                    <img src={img1} alt="" />
+                    <img className="isimage" src={img1} alt="" />
                 </div>
                 <div>
-                    <img src={img2} alt="" />
+                    <img className="isimage" src={img2} alt="" />
                 </div>
             </div>
 
@@ -61,7 +61,7 @@ export default function MainSection() {
             <ContainerListInfo titleText={j[1].titleText} list={j[1].list} />
 
             {/* секция кружков */}
-            <MugsSection/>
+            <MugsSection />
         </section>
         // конец
     );
