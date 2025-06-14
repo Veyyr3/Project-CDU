@@ -550,6 +550,9 @@ h2 {
 h3 {
     font-size: 3rem;
 }
+h4 {
+    font-size: 2rem;
+}
 
 // задать размер шрифта тексту
 p {
@@ -557,7 +560,7 @@ p {
     color: var(--main-text);
 }
 
-// стили списков с исключением для кнопок навигации
+// корректные стили списков с исключением для кнопок навигации
 ul:not(nav ul), ol {
     list-style: none; // контроль для кастомных списков
 
@@ -696,6 +699,7 @@ body {
         margin: 2rem 3rem 2rem 3rem;
     }
 
+    // страницы сайта
     section {
         // flex
         display: flex;
@@ -708,5 +712,47 @@ body {
     footer {
         width: 100%;
         background-color: var(--div-hat);
+        color: var(--div-text);
+
+        // flex
+        display: flex;
+        flex-direction: row;
+
+        // все заголовки в футере
+        h4 {
+            font-size: 2.5rem;
+        }
+    }
+
+    // левая часть 
+    .footer-left {
+        width: 50%;
+        padding: 30px;
+        font-style: normal; // убрать italic
+
+        // контейнер который группирует текст
+        div {
+            // flex
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        // сделать цвет для каждого
+        p {
+            color: var(--div-text);
+        }
+    }
+
+    // правая часть
+    .footer-right {
+        width: 50%;
+        padding: 30px;
+
+        // flex
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 // #endregion Footer

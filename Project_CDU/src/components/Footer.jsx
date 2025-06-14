@@ -1,6 +1,4 @@
-// #region компоненты
 import { YMaps, Map, Placemark } from "@pbe/react-yandex-maps"; // яндекс карты
-// #endregion компоненты
 
 export default function Footer() {
     // Координаты для Улица Сарбагышева, 156, Токмок
@@ -10,37 +8,36 @@ export default function Footer() {
     return (
         <footer>
             {/* левая часть */}
-            <address>
-                <h3>Контактная информация:</h3>
-                <p>
-                    <strong>Адрес:</strong>
-                    Улица Сарбагышева, 156 ​Токмок, Чуйский район, Чуйская
-                    область
-                </p>
-                <p>
-                    <strong>Телефон:</strong>
-                    +7 (123) 456-78-90
-                </p>
-                <p>
-                    <strong>Email:</strong>
-                    info@youthcenter.ru
-                </p>
+            <address className="footer-left">
+                <h4>Контактная информация:</h4>
+                <br />
+                <div>
+                    <p>
+                        <strong>Адрес:</strong> Улица Сарбагышева, 156 ​Токмок,
+                        Чуйский район, Чуйская область
+                    </p>
+                    <p>
+                        <strong>Телефон:</strong> +7 (123) 456-78-90
+                    </p>
+                    <p>
+                        <strong>Email:</strong> info@youthcenter.ru
+                    </p>
+                </div>
             </address>
 
             {/* правая часть */}
-            <div>
-                {/* Добавляем modules в YMaps */}
+            <div className="footer-right">
+                <h4>Мы на карте:</h4>
+                <br />
+                {/* Карта */}
                 <YMaps modules={["geocode", "geoObjects"]}>
-                    {" "}
-                    {/* 'geocode' полезен, 'geoObjects' нужен для Placemark */}
-                    <div>
-                        {/* Убедитесь, что у контейнера карты есть заданная высота */}
+                    <div id="container-yandex-map">
                         <Map
                             defaultState={{
                                 center: tokmokCoordinates,
                                 zoom: mapZoom,
                             }}
-                            style={{ width: "100%", height: "400px" }} // Обязательно задайте высоту
+                            style={{ width: "600px", height: "200px" }}
                         >
                             <Placemark
                                 geometry={tokmokCoordinates}
