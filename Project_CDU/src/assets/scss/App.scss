@@ -171,18 +171,26 @@
 // #endregion ContainerMugsTeacher
 
 // #region ProjectSection
+    // главный контейнер
+    .main-container-project-item {
+        border: 1px solid #000;
+    }
+
     // контейнер с кратким описанием
     .container-short-dicsription {
         background-color: var(--div-hat);
         color: var(--div-text);
+        padding: 20px;
 
         // flex
         display: flex;
         flex-direction: column;
+        gap: 10px;
 
         // для заголовка
         h3 {
             text-align: center;
+            color: var(--div-text)
         }
 
         // для strong

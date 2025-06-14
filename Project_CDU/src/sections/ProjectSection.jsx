@@ -9,7 +9,11 @@
 
 export default function ProjectSection() {
     return (
-        <section className="container-info container-title">
+        <section
+            className="container-info container-title"
+            id="ProjectSection"
+            style={{ padding: "1.75rem" }}
+        >
             <h2>Страница "Проекты и конкурсы"</h2>
             {/* описание страницы */}
             <div className="div-text-info">
@@ -30,23 +34,26 @@ export default function ProjectSection() {
                 {/* Заголовок */}
                 <div className="div-text-info" style={{ textAlign: "center" }}>
                     <h2>
-                        <strong>Список проектов: </strong>
+                        <strong>Список проектов:</strong>
                     </h2>
                 </div>
 
-                {/* автоматизация вывода проектов */}
-                {text_for_project_item.map((i, index) => {
-                    return (
-                        <ProjectItem
-                            key={index}
-                            imgProjectSrc={i.imgProjectSrc}
-                            dicsImg={i.dicsImg}
-                            title={i.title}
-                            age={i.age}
-                            term={i.term}
-                        />
-                    );
-                })}
+                {/* контейнер для вывода проектов */}
+                <div style={{display: 'flex', flexDirection: 'column', gap: '30px', padding: '0 100px'}}>
+                    {/* автоматизация вывода проектов */}
+                    {text_for_project_item.map((i, index) => {
+                        return (
+                            <ProjectItem
+                                key={index}
+                                imgProjectSrc={i.imgProjectSrc}
+                                dicsImg={i.dicsImg}
+                                title={i.title}
+                                age={i.age}
+                                term={i.term}
+                            />
+                        );
+                    })}
+                </div>
             </section>
             {/* КОНЕЦ секция с проектами */}
         </section>

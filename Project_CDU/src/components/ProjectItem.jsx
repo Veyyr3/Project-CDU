@@ -6,7 +6,7 @@ export default function ProjectItem({imgProjectSrc, dicsImg, title, age, term}) 
         <div className="main-container-project-item">
 
             {/* контейнер для фото и скрытого описания */}
-            <div className="container-img-mug-teacher container-img--mug">
+            <div className="container-img-mug-teacher container-img--mug container-img-title-discription">
                 <img src={imgProjectSrc} alt="" />
                 {/* контейнер для краткого описания фото (изначально он невидим) */}
                 <div className="container-hiden-discription--mug">
