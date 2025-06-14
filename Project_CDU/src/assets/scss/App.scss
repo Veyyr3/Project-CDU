@@ -169,3 +169,30 @@
         font-size: 16pt;
     }
 // #endregion ContainerMugsTeacher
+
+// #region ProjectSection
+    // контейнер с кратким описанием
+    .container-short-dicsription {
+        background-color: var(--div-hat);
+        color: var(--div-text);
+
+        // flex
+        display: flex;
+        flex-direction: column;
+
+        // для заголовка
+        h3 {
+            text-align: center;
+        }
+
+        // для strong
+        strong {
+            color: var(--text-red);
+        }
+
+        // для текста
+        p {
+            text-align: left;
+        }
+    }
+// #endregion ProjectSection

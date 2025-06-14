@@ -20,7 +20,7 @@
         text_for_container_text_info,
         text_for_container_list_info
     } from "../data.js"; 
-// #endregion
+// #endregion разное
 
 
 export default function MainSection() {

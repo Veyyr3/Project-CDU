@@ -10,6 +10,11 @@
     import imgNeedleWorkTeacher from "./assets/Images/mugs_section/teachers/needlework-teacher.jpg";
     import imgLanguageTeacher from "./assets/Images/mugs_section/teachers/language-teacher.jpg";
     import imgSportTeacher from "./assets/Images/mugs_section/teachers/sport-teacher.jpeg";
+
+    // проекты
+    import imgEcoCity from "./assets/Images/projects_section/projects_section_1.png";
+    import imgMotherland from "./assets/Images/projects_section/projects_section_2.jpg";
+    import imgProgrammer from "./assets/Images/projects_section/projects_section_3.jpg";
 // #endregion фото
 
 // текст для текстовой информации на сайте
@@ -93,8 +98,37 @@ const text_for_container_mugs_teacher = [
     },
 ];
 
+// текст для элементов проектов
+const text_for_project_item = [
+    {
+        imgProjectSrc: imgEcoCity,
+        dicsImg:
+            'Проект направлен на разработку и создание макетов "зеленых" городов с использованием переработанных материалов. Участники изучают основы экологии и устойчивого развития.',
+        title: "Эко-город будущего",
+        age: "10-14 лет",
+        term: "Сентябрь - Декабрь 2025",
+    },
+    {
+        imgProjectSrc: imgMotherland,
+        dicsImg:
+            "Конкурс творческих работ (рисунков, рассказов, поделок), посвященных культуре, истории и природе родного края.",
+        title: "Моя Родина глазами детей",
+        age: "6-12 лет",
+        term: "Октябрь 2025",
+    },
+    {
+        imgProjectSrc: imgProgrammer,
+        dicsImg:
+            "Цикл мастер-классов по основам программирования и робототехники. Участники научатся создавать простые игры и управлять роботами.",
+        title: "Юный программист",
+        age: "12-16 лет",
+        term: "Ноябрь 2025 - Февраль 2026",
+    },
+];
+
 export {
     text_for_container_text_info,
     text_for_container_list_info,
     text_for_container_mugs_teacher,
+    text_for_project_item,
 };
