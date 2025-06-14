@@ -25,6 +25,9 @@ export default function Footer() {
                 </div>
             </address>
 
+            {/* разделительная линия */}
+            <div className="footer-line-between"></div>
+
             {/* правая часть */}
             <div className="footer-right">
                 <h4>Мы на карте:</h4>

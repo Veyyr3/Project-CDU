@@ -757,4 +757,10 @@ body {
         justify-content: center;
         align-items: center;
     }
+
+    // разделительная линия
+    .footer-line-between {
+        border-left: 2px solid var(--div-text);
+        margin: 20px 0 20px 0;
+    }
 // #endregion Footer
