@@ -6,7 +6,7 @@ export default function Footer() {
     const mapZoom = 15; // Можно увеличить масштаб для более детального вида
 
     return (
-        <footer>
+        <footer id="contacts-footer">
             {/* левая часть */}
             <address className="footer-left">
                 <h4>Контактная информация:</h4>

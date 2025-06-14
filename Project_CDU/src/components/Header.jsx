@@ -4,6 +4,13 @@ import night_theme_button from "../assets/Images/night_theme_icon.png";
 import Button from './Button'
 
 export default function Header ({setTargetPage}) {
+    // сделать скроллинг с контактов на футер
+    const scrollToFooter = () => {
+        const footerElement = document.getElementById("contacts-footer");
+        if (footerElement) {
+            footerElement.scrollIntoView({ behavior: "smooth" });
+        }
+    };
     
     return (
         <header>
@@ -48,7 +55,12 @@ export default function Header ({setTargetPage}) {
                         </Button>
                     </li>
                     <li>
-                        <Button className="nav_button">Контакты</Button>
+                        <Button // Используем компонент Button здесь
+                            className="nav_button"
+                            onClick={scrollToFooter} // Вызываем функцию прокрутки
+                        >
+                            Контакты
+                        </Button>
                     </li>
                 </ul>
             </nav>
