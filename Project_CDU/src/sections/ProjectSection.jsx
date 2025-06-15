@@ -1,6 +1,10 @@
 // #region компоненты
+    // компонент с информацией о проекте
     import ProjectItem from "../components/ProjectItem";
+    // компонент блок с линией слева и текстом
     import ContainerLineAside from "../components/ContainerLineAside";
+    // для анимации (блоки появляются, когда они в поле зрения)
+    import FadeInOnScroll from "../components/forAnimation/FadeInOnScroll"; 
 // #endregion компоненты
 
 // #region разное
@@ -9,40 +13,56 @@
 // #endregion разное
 
 export default function ProjectSection() {
+    // переменные для задержок анимации
+    const delay_1 = 0.1;
+    const delay_2 = 0.2;
+
     return (
+        // корневой элемент
         <section
             className="container-info container-title"
             id="ProjectSection"
             style={{ padding: "1.75rem" }}
         >
-            <h2>Страница "Проекты и конкурсы"</h2>
+            {/* Заголовок секции */}
+            <FadeInOnScroll delay={delay_1}>
+                <h2>Страница "Проекты и конкурсы"</h2>
+            </FadeInOnScroll>
 
             {/* описание страницы */}
-            <ContainerLineAside>
-                <div className="div-text-info">
-                    <h4>
-                        <strong>Цель этой страницы: </strong>
-                    </h4>
-                    <p>
-                        Познакомить вас с нашими текущими и предстоящими
-                        проектами и конкурсами, дать возможность присоединиться
-                        к ним и проявить свои таланты. Мы верим, что участие в
-                        проектах развивает важные навыки, такие как командная
-                        работа, критическое мышление и креативность.
-                    </p>
-                </div>
-            </ContainerLineAside>
+            <FadeInOnScroll delay={delay_1}>
+                <ContainerLineAside>
+                    <div className="div-text-info">
+                        <h4>
+                            <strong>Цель этой страницы: </strong>
+                        </h4>
+                        <p>
+                            Познакомить вас с нашими текущими и предстоящими
+                            проектами и конкурсами, дать возможность
+                            присоединиться к ним и проявить свои таланты. Мы
+                            верим, что участие в проектах развивает важные
+                            навыки, такие как командная работа, критическое
+                            мышление и креативность.
+                        </p>
+                    </div>
+                </ContainerLineAside>
+            </FadeInOnScroll>
 
             {/* секция с проектами */}
             <section>
                 {/* Заголовок */}
-                <div className="div-text-info" style={{ textAlign: "center" }}>
-                    <h2>
-                        <strong>Список проектов:</strong>
-                    </h2>
-                </div>
+                <FadeInOnScroll delay={delay_2}>
+                    <div
+                        className="div-text-info"
+                        style={{ textAlign: "center" }}
+                    >
+                        <h2>
+                            <strong>Список проектов:</strong>
+                        </h2>
+                    </div>
+                </FadeInOnScroll>
 
-                {/* контейнер для вывода проектов */}
+                {/* контейнер для вывода проектов (Для этой же автоматизации) */}
                 <div
                     style={{
                         display: "flex",
@@ -54,19 +74,22 @@ export default function ProjectSection() {
                     {/* автоматизация вывода проектов */}
                     {text_for_project_item.map((i, index) => {
                         return (
-                            <ProjectItem
-                                key={index}
-                                imgProjectSrc={i.imgProjectSrc}
-                                dicsImg={i.dicsImg}
-                                title={i.title}
-                                age={i.age}
-                                term={i.term}
-                            />
+                            <FadeInOnScroll delay={delay_1}>
+                                <ProjectItem
+                                    key={index}
+                                    imgProjectSrc={i.imgProjectSrc}
+                                    dicsImg={i.dicsImg}
+                                    title={i.title}
+                                    age={i.age}
+                                    term={i.term}
+                                />
+                            </FadeInOnScroll>
                         );
                     })}
                 </div>
             </section>
             {/* КОНЕЦ секция с проектами */}
         </section>
+        // КОНЕЦ корневой элемент
     );
 }

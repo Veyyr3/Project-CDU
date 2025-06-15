@@ -1,7 +1,7 @@
 // ЭТО КОМПОНЕНТ ДЛЯ АНИМАЦИИ, НО ОБОРАЧИВАЕТ В DIV
 import React, { useRef, useEffect, useState } from "react";
 
-const FadeInOnScroll = ({ children, delay = 0, once = true }) => {
+const FadeInOnScroll = ({ children, delay = 0, once = true, thresholdValue = 0.1 }) => {
     const domRef = useRef(); // Создаем ref для привязки к DOM-элементу
     const [isVisible, setIsVisible] = useState(false); // Состояние для отслеживания видимости
 
@@ -23,7 +23,7 @@ const FadeInOnScroll = ({ children, delay = 0, once = true }) => {
                 });
             },
             {
-                threshold: 0.1, // 10% элемента должно быть в поле зрения для срабатывания
+                threshold: thresholdValue, // 10% элемента должно быть в поле зрения для срабатывания
                 rootMargin: "0px 0px -50px 0px", // Небольшой отступ, чтобы срабатывало чуть раньше
             }
         );
