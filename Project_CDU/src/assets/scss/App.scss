@@ -260,5 +260,12 @@
         display: flex;
         flex-direction: column;
         gap: 40px;
+
+        // блок в который обернуты изображения
+        div {
+            img {
+                width: 100%; // для исправления бага
+            }
+        }
     }
 // #endregion GallerySection
