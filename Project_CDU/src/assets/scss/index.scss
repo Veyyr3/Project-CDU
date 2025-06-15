@@ -534,6 +534,22 @@ $font-size: 20pt; // размер шрифта
     // #endregion размер шрифта--------------------------------------------------------------------
 // #endregion вспомогательные классы-----------------------------------------------------
 
+// #region Общие Анимации
+    // изначально все элементы спрятаны
+    .fade-in-section {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        will-change: opacity, transform;
+    }
+
+    // когда элемент в поле зрения, то он показывается
+    .fade-in-section.is-visible {
+        opacity: 1; /* Полностью непрозрачен */
+        transform: translateY(0); /* Возвращается на исходное место */
+    }
+// #endregion Общие Анимации    
+
 *, *::after, *::before {
     margin: 0;
     padding: 0;
@@ -738,7 +754,6 @@ body {
     .rotate-light {
         transform: rotate(0deg);
     }
-
 // #endregion Header
 
 // #region main

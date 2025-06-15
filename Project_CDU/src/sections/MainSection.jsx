@@ -11,6 +11,8 @@
     import ContainerListInfo from "../components/ContainerListInfo"; 
     // секция кружков
     import MugsSection from "./MugsSection"
+    // для анимации (блоки появляются, когда они в поле зрения)
+    import FadeInOnScroll from "../components/forAnimation/FadeInOnScroll"; 
 // #endregion компоненты
 
 
@@ -31,34 +33,50 @@ export default function MainSection() {
         // начало
         <section>
             {/* Блок Приветствие */}
-            <ContainerTextInfo
-                titleText={i[0].titleText}
-                colorfulText={i[0].colorfulText}
-                text={i[0].text}
-            />
+            <FadeInOnScroll delay={0.2}>
+                <ContainerTextInfo
+                    titleText={i[0].titleText}
+                    colorfulText={i[0].colorfulText}
+                    text={i[0].text}
+                />
+            </FadeInOnScroll>
 
             {/* блок с фото */}
-            <div className="container-2-imgs">
-                <div>
-                    <img className="isimage" src={img1} alt="" />
+            <FadeInOnScroll delay={0.4}>
+                <div className="container-2-imgs">
+                    <div>
+                        <img className="isimage" src={img1} alt="" />
+                    </div>
+                    <div>
+                        <img className="isimage" src={img2} alt="" />
+                    </div>
                 </div>
-                <div>
-                    <img className="isimage" src={img2} alt="" />
-                </div>
-            </div>
+            </FadeInOnScroll>
 
             {/* Блок Миссия */}
-            <ContainerTextInfo
-                titleText={i[1].titleText}
-                colorfulText={i[1].colorfulText}
-                text={i[1].text}
-            />
+            <FadeInOnScroll delay={0.2}>
+                <ContainerTextInfo
+                    titleText={i[1].titleText}
+                    colorfulText={i[1].colorfulText}
+                    text={i[1].text}
+                />
+            </FadeInOnScroll>
 
-            {/* Блок список 1 */}
-            <ContainerListInfo titleText={j[0].titleText} list={j[0].list} />
+            {/* Блок список 1 цели */}
+            <FadeInOnScroll delay={0.2}>
+                <ContainerListInfo
+                    titleText={j[0].titleText}
+                    list={j[0].list}
+                />
+            </FadeInOnScroll>
 
-            {/* Блок список 2 */}
-            <ContainerListInfo titleText={j[1].titleText} list={j[1].list} />
+            {/* Блок список 2 задачи */}
+            <FadeInOnScroll delay={0.2}>
+                <ContainerListInfo
+                    titleText={j[1].titleText}
+                    list={j[1].list}
+                />
+            </FadeInOnScroll>
 
             {/* секция кружков */}
             <MugsSection />
