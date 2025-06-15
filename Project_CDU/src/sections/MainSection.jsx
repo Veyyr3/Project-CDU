@@ -29,11 +29,15 @@ export default function MainSection() {
     const i = text_for_container_text_info; // текст для контейнера
     const j = text_for_container_list_info; // список для контейнера
 
+    // переменные для задержок анимации
+    const delay_1 = 0.1;
+    const delay_2 = 0.2;
+
     return (
         // начало
         <section>
             {/* Блок Приветствие */}
-            <FadeInOnScroll delay={0.1}>
+            <FadeInOnScroll delay={delay_1}>
                 <ContainerTextInfo
                     titleText={i[0].titleText}
                     colorfulText={i[0].colorfulText}
@@ -42,7 +46,7 @@ export default function MainSection() {
             </FadeInOnScroll>
 
             {/* блок с фото */}
-            <FadeInOnScroll delay={0.2}>
+            <FadeInOnScroll delay={delay_2}>
                 <div className="container-2-imgs">
                     <div>
                         <img className="isimage" src={img1} alt="" />
@@ -54,7 +58,7 @@ export default function MainSection() {
             </FadeInOnScroll>
 
             {/* Блок Миссия */}
-            <FadeInOnScroll delay={0.2}>
+            <FadeInOnScroll delay={delay_1}>
                 <ContainerTextInfo
                     titleText={i[1].titleText}
                     colorfulText={i[1].colorfulText}
@@ -63,7 +67,7 @@ export default function MainSection() {
             </FadeInOnScroll>
 
             {/* Блок список 1 цели */}
-            <FadeInOnScroll delay={0.2}>
+            <FadeInOnScroll delay={delay_1}>
                 <ContainerListInfo
                     titleText={j[0].titleText}
                     list={j[0].list}
@@ -71,7 +75,7 @@ export default function MainSection() {
             </FadeInOnScroll>
 
             {/* Блок список 2 задачи */}
-            <FadeInOnScroll delay={0.2}>
+            <FadeInOnScroll delay={delay_1}>
                 <ContainerListInfo
                     titleText={j[1].titleText}
                     list={j[1].list}
