@@ -7,7 +7,10 @@
 // #endregion фото
 
 // #region компоненты
-    import ContainerMugsTeacher from "../components/ContainerMugsTeacher"; // блок с фото занятия и учителем
+    // блок с фото занятия и учителем
+    import ContainerMugsTeacher from "../components/ContainerMugsTeacher";
+    // для анимации (блоки появляются, когда они в поле зрения)
+    import FadeInOnScroll from "../components/forAnimation/FadeInOnScroll"; 
 // #endregion компоненты
 
 // #region разное
@@ -19,11 +22,17 @@ export default function MugsSection() {
     const ilr = text_for_container_mugs_teacher;
 
     return (
-        <section className="container-info gap-20px p-lg" style={{paddingTop: '5px'}}>
+        // Корневой элемент
+        <section
+            className="container-info gap-20px p-lg"
+            style={{ paddingTop: "5px" }}
+        >
             {/* заголовок */}
-            <div className="container-title">
-                <h3>Образовательные программы и преподаватели</h3>
-            </div>
+            <FadeInOnScroll delay={0.2}>
+                <div className="container-title">
+                    <h3>Образовательные программы и преподаватели</h3>
+                </div>
+            </FadeInOnScroll>
 
             {/* АВТОМАТИЗАЦИЯ картинки кружков и учителей и подписи к ним */}
             {ilr.map((i, index) => {
@@ -40,5 +49,6 @@ export default function MugsSection() {
                 );
             })}
         </section>
+        // КОНЕЦ Корневой элемент
     );
 }

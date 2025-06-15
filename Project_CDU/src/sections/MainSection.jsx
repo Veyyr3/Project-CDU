@@ -33,7 +33,7 @@ export default function MainSection() {
         // начало
         <section>
             {/* Блок Приветствие */}
-            <FadeInOnScroll delay={0.2}>
+            <FadeInOnScroll delay={0.1}>
                 <ContainerTextInfo
                     titleText={i[0].titleText}
                     colorfulText={i[0].colorfulText}
@@ -42,7 +42,7 @@ export default function MainSection() {
             </FadeInOnScroll>
 
             {/* блок с фото */}
-            <FadeInOnScroll delay={0.4}>
+            <FadeInOnScroll delay={0.2}>
                 <div className="container-2-imgs">
                     <div>
                         <img className="isimage" src={img1} alt="" />

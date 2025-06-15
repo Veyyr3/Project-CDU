@@ -1,4 +1,4 @@
-// src/components/FadeInOnScroll.js
+// ЭТО КОМПОНЕНТ ДЛЯ АНИМАЦИИ, НО ОБОРАЧИВАЕТ В DIV
 import React, { useRef, useEffect, useState } from "react";
 
 const FadeInOnScroll = ({ children, delay = 0, once = true }) => {
