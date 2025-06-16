@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./assets/scss/App.scss";
+import './assets/scss/ForMP.scss'
 
 // #region компоненты
 import Header from "./components/Header";
