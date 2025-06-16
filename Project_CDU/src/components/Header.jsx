@@ -15,11 +15,16 @@ import { useEffect, useState } from "react";
 // #endregion компоненты
 
 export default function Header({ setTargetPage }) {
-    // Состояние для отслеживания текущей темы
-    const [isDarkTheme, setIsDarkTheme] = useState(() => {
-        const savedTheme = localStorage.getItem("theme");
-        return savedTheme === "dark-theme";
-    });
+    // #region useState
+        // Состояние для отслеживания текущей темы
+        const [isDarkTheme, setIsDarkTheme] = useState(() => {
+            const savedTheme = localStorage.getItem("theme");
+            return savedTheme === "dark-theme";
+        });
+
+        // для показа или скрытия меню для телефонов
+        const [showContainer, setShowContainer] = useState(false);
+    // #endregion useState
 
     // useEffect для инициализации темы при первой загрузке компонента
     useEffect(() => {
@@ -55,85 +60,215 @@ export default function Header({ setTargetPage }) {
 
     return (
         <header>
-            {/* логотип */}
-            <FadeInOnScroll delay={0.1}>
-                <div id="container-main-logo">
-                    <img className="isimage" src={logo} alt="Логотип ЦДЮ" />
-                </div>
-            </FadeInOnScroll>
+            {/* верхний блок */}
+            <div id="header-top">
+                {/* логотип */}
+                <FadeInOnScroll delay={0.1}>
+                    <div id="container-main-logo">
+                        <img className="isimage" src={logo} alt="Логотип ЦДЮ" />
+                    </div>
+                </FadeInOnScroll>
 
-            {/* навигация */}
-            <nav>
-                <ul>
-                    <li>
-                        <FadeInOnScroll delay={0.3}>
-                            <Button
-                                className="nav_button"
-                                onClick={() => setTargetPage("main")}
-                            >
-                                Главная
-                            </Button>
-                        </FadeInOnScroll>
-                    </li>
-                    <li>
-                        <FadeInOnScroll delay={0.4}>
-                            <Button
-                                className="nav_button"
-                                onClick={() => setTargetPage("mugs")}
-                            >
-                                Кружки
-                            </Button>
-                        </FadeInOnScroll>
-                    </li>
-                    <li>
-                        <FadeInOnScroll delay={0.5}>
-                            <Button
-                                className="nav_button"
-                                onClick={() => setTargetPage("projects")}
-                            >
-                                Проекты и конкурсы
-                            </Button>
-                        </FadeInOnScroll>
-                    </li>
-                    <li>
-                        <FadeInOnScroll delay={0.5}>
-                            <Button
-                                className="nav_button"
-                                onClick={() => setTargetPage("gallery")}
-                            >
-                                Галерея
-                            </Button>
-                        </FadeInOnScroll>
-                    </li>
-                    <li>
-                        <FadeInOnScroll delay={0.6}>
-                            <Button
-                                className="nav_button"
-                                onClick={scrollToFooter}
-                            >
-                                Контакты
-                            </Button>
-                        </FadeInOnScroll>
-                    </li>
-                </ul>
-            </nav>
-
-            {/* переключить тему */}
-            <FadeInOnScroll delay={0.7}>
+                {/* кнопка для бургер меню (Для телефонов) */}
                 <Button
-                    id="container-night-theme-toggle"
-                    onClick={toggleTheme} // Вызываем toggleTheme без анонимной функции
-                    style={{ borderWidth: "0px" }}
+                    onClick={
+                        showContainer
+                            ? () => setShowContainer(false) // если нажали второй раз
+                            : () => setShowContainer(true) // если нажали один раз
+                    }
+                    class="nav_button but-open-menu-MP"
                 >
-                    <img
-                        src={night_theme_button}
-                        alt="Переключить тему"
-                        title="Переключить тему"
-                        // Динамически добавляем класс для поворота
-                        className={isDarkTheme ? "rotate-dark" : "rotate-light"}
-                    />
+                    ☰
                 </Button>
-            </FadeInOnScroll>
+
+                {/* блок с НАВИГАЦИЕЙ и ПЕРЕКЛЮЧЕНИЕМ ТЕМЫ для ПК */}
+                <div className="container-nav-theme-toggle-PC">
+                    {/* навигация */}
+                    <nav>
+                        <ul>
+                            <li>
+                                <FadeInOnScroll delay={0.3}>
+                                    <Button
+                                        className="nav_button"
+                                        onClick={() => setTargetPage("main")}
+                                    >
+                                        Главная
+                                    </Button>
+                                </FadeInOnScroll>
+                            </li>
+                            <li>
+                                <FadeInOnScroll delay={0.4}>
+                                    <Button
+                                        className="nav_button"
+                                        onClick={() => setTargetPage("mugs")}
+                                    >
+                                        Кружки
+                                    </Button>
+                                </FadeInOnScroll>
+                            </li>
+                            <li>
+                                <FadeInOnScroll delay={0.5}>
+                                    <Button
+                                        className="nav_button"
+                                        onClick={() =>
+                                            setTargetPage("projects")
+                                        }
+                                    >
+                                        Проекты и конкурсы
+                                    </Button>
+                                </FadeInOnScroll>
+                            </li>
+                            <li>
+                                <FadeInOnScroll delay={0.5}>
+                                    <Button
+                                        className="nav_button"
+                                        onClick={() => setTargetPage("gallery")}
+                                    >
+                                        Галерея
+                                    </Button>
+                                </FadeInOnScroll>
+                            </li>
+                            <li>
+                                <FadeInOnScroll delay={0.6}>
+                                    <Button
+                                        className="nav_button"
+                                        onClick={scrollToFooter}
+                                    >
+                                        Контакты
+                                    </Button>
+                                </FadeInOnScroll>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    {/* переключить тему */}
+                    <FadeInOnScroll delay={0.7}>
+                        <Button
+                            id="container-night-theme-toggle"
+                            onClick={toggleTheme} // Вызываем toggleTheme без анонимной функции
+                            style={{ borderWidth: "0px" }}
+                        >
+                            <img
+                                src={night_theme_button}
+                                alt="Переключить тему"
+                                title="Переключить тему"
+                                // Динамически добавляем класс для поворота
+                                className={
+                                    isDarkTheme ? "rotate-dark" : "rotate-light"
+                                }
+                            />
+                        </Button>
+                    </FadeInOnScroll>
+                </div>
+                {/* КОНЕЦ блок с НАВИГАЦИЕЙ и ПЕРЕКЛЮЧЕНИЕМ ТЕМЫ для ПК */}
+            </div>
+            {/* КОНЕЦ верхний блок */}
+
+            {/* нижний блок (для телефонов) */}
+            <div id="header-bottom">
+                {/* блок с НАВИГАЦИЕЙ и ПЕРЕКЛЮЧЕНИЕМ ТЕМЫ для МТ */}
+                <div
+                    className={
+                        showContainer
+                            ? "container-nav-theme-toggle-MP"
+                            : "container-nav-theme-toggle-OPEN-MP"
+                    }
+                >
+                    {/* навигация */}
+                    <nav>
+                        <ul>
+                            <li>
+                                <FadeInOnScroll delay={0.3}>
+                                    <Button
+                                        className="nav_button"
+                                        onClick={() => setTargetPage("main")}
+                                    >
+                                        Главная
+                                    </Button>
+                                </FadeInOnScroll>
+                            </li>
+                            <li>
+                                <FadeInOnScroll delay={0.4}>
+                                    <Button
+                                        className="nav_button"
+                                        onClick={() => setTargetPage("mugs")}
+                                    >
+                                        Кружки
+                                    </Button>
+                                </FadeInOnScroll>
+                            </li>
+                            <li>
+                                <FadeInOnScroll delay={0.5}>
+                                    <Button
+                                        className="nav_button"
+                                        onClick={() =>
+                                            setTargetPage("projects")
+                                        }
+                                    >
+                                        Проекты и конкурсы
+                                    </Button>
+                                </FadeInOnScroll>
+                            </li>
+                            <li>
+                                <FadeInOnScroll delay={0.5}>
+                                    <Button
+                                        className="nav_button"
+                                        onClick={() => setTargetPage("gallery")}
+                                    >
+                                        Галерея
+                                    </Button>
+                                </FadeInOnScroll>
+                            </li>
+                            <li>
+                                <FadeInOnScroll delay={0.6}>
+                                    <Button
+                                        className="nav_button"
+                                        onClick={scrollToFooter}
+                                    >
+                                        Контакты
+                                    </Button>
+                                </FadeInOnScroll>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    {/* переключить тему */}
+                    <div
+                        style={{
+                            display: "flex",
+                            alignItems: "center",
+                            gap: "10px",
+                            marginTop: '10px'
+                        }}
+                    >
+                        {/* кнопка переключения темы */}
+                        <FadeInOnScroll delay={0.7}>
+                            <Button
+                                id="container-night-theme-toggle"
+                                onClick={toggleTheme}
+                                style={{ borderWidth: "0px" }}
+                            >
+                                <img
+                                    src={night_theme_button}
+                                    alt="Переключить тему"
+                                    title="Переключить тему"
+                                    className={
+                                        isDarkTheme
+                                            ? "rotate-dark"
+                                            : "rotate-light"
+                                    }
+                                />
+                            </Button>
+                        </FadeInOnScroll>
+                        {/* подпись переключения темы для телефонов */}
+                        <div className="container-title-night-theme-MP">
+                            <p>⬅ Переключить тему</p>
+                        </div>
+                    </div>
+                </div>
+                {/* КОНЕЦ блок с НАВИГАЦИЕЙ и ПЕРЕКЛЮЧЕНИЕМ ТЕМЫ для МТ */}
+            </div>
+            {/* КОНЕЦ нижний блок (для телефонов) */}
         </header>
     );
 }

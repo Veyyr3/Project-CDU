@@ -550,6 +550,11 @@ $font-size: 20pt; // размер шрифта
     }
 // #endregion Общие Анимации    
 
+// ко всем классам и айди, которые только для телефонов
+[class$="-MP"], [id*="-MP"] {
+  display: none;
+}
+
 *, *::after, *::before {
     margin: 0;
     padding: 0;
@@ -678,8 +683,25 @@ body {
 
         // flex
         display: flex;
+        flex-direction: column;
+    }
+
+    // верхняя часть хидера
+    #header-top {
+        display: flex;
         flex-direction: row;
         align-items: center;
+    }
+
+    // контейнер с навигацией и кнопкой переключении темы
+    .container-nav-theme-toggle-PC {
+        margin-left: auto; // поместить вправо
+
+        // flex
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
 
         // кнопки навигации
         nav  { 
@@ -726,7 +748,6 @@ body {
 
         // для изображения
         width: 180px;
-        // height: 100px;
         aspect-ratio: 2/1;
         display: flex; // Для правильного растягивания
 
