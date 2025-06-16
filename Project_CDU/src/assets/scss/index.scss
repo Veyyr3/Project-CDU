@@ -722,10 +722,16 @@ body {
     // логотип
     #container-main-logo {
         margin-left: 15px;
+
         // для изображения
-        @include _imgs_no_border(150px);
+        width: 200px;
+        height: 100px;
+        display: flex; // Для правильного растягивания
+
         img {
-            border-radius: 25px;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
         }
     }
 
