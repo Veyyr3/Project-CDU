@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 
 // #region фото
-    // логотип
-    import logo from "../assets/Images/Logo.png";
+    // Главный логотип сайта
+    import logo from "../assets/Images/CDU_LOGO.jpg";
     // для кнопки темной темы
     import night_theme_button from "../assets/Images/night_theme_icon.png";
 // #endregion фото
@@ -58,7 +58,7 @@ export default function Header({ setTargetPage }) {
             {/* логотип */}
             <FadeInOnScroll delay={0.1}>
                 <div id="container-main-logo">
-                    <img src={logo} alt="Логотип ЦДЮ" />
+                    <img className="isimage" src={logo} alt="Логотип ЦДЮ" />
                 </div>
             </FadeInOnScroll>
 

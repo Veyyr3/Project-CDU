@@ -679,6 +679,7 @@ body {
         // flex
         display: flex;
         flex-direction: row;
+        align-items: center;
 
         // кнопки навигации
         nav  { 
@@ -720,8 +721,12 @@ body {
 
     // логотип
     #container-main-logo {
+        margin-left: 15px;
         // для изображения
-        @include _imgs(4rem, 15px);
+        @include _imgs_no_border(150px);
+        img {
+            border-radius: 25px;
+        }
     }
 
     // кнокпа переключения темы
