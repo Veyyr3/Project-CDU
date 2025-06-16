@@ -543,10 +543,10 @@ $font-size: 20pt; // размер шрифта
         will-change: opacity, transform;
     }
 
-    // когда элемент в поле зрения, то он показывается
+    // когда элемент в поле зрения, то он показывается снизу вверх
     .fade-in-section.is-visible {
-        opacity: 1; /* Полностью непрозрачен */
-        transform: translateY(0); /* Возвращается на исходное место */
+        opacity: 1;
+        transform: translateY(0);
     }
 // #endregion Общие Анимации    
 

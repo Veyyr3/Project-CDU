@@ -1,7 +1,18 @@
-import { useEffect, useState } from "react"; // Импортируем useState
-import logo from "../assets/Images/Logo.png";
-import night_theme_button from "../assets/Images/night_theme_icon.png";
-import Button from "./Button";
+import { useEffect, useState } from "react";
+
+// #region фото
+    // логотип
+    import logo from "../assets/Images/Logo.png";
+    // для кнопки темной темы
+    import night_theme_button from "../assets/Images/night_theme_icon.png";
+// #endregion фото
+
+// #region компоненты
+    // кастомная кнопка
+    import Button from "./Button";
+    // для анимации (плавное появление когда в поле зрения) но не оборачивать в div
+    import FadeInOnScroll from "../components/forAnimation/FadeInOnScroll";
+// #endregion компоненты
 
 export default function Header({ setTargetPage }) {
     // Состояние для отслеживания текущей темы
@@ -45,65 +56,84 @@ export default function Header({ setTargetPage }) {
     return (
         <header>
             {/* логотип */}
-            <div id="container-main-logo">
-                <img src={logo} alt="Логотип ЦДЮ" />
-            </div>
+            <FadeInOnScroll delay={0.1}>
+                <div id="container-main-logo">
+                    <img src={logo} alt="Логотип ЦДЮ" />
+                </div>
+            </FadeInOnScroll>
+
             {/* навигация */}
             <nav>
                 <ul>
                     <li>
-                        <Button
-                            className="nav_button"
-                            onClick={() => setTargetPage("main")}
-                        >
-                            Главная
-                        </Button>
+                        <FadeInOnScroll delay={0.3}>
+                            <Button
+                                className="nav_button"
+                                onClick={() => setTargetPage("main")}
+                            >
+                                Главная
+                            </Button>
+                        </FadeInOnScroll>
                     </li>
                     <li>
-                        <Button
-                            className="nav_button"
-                            onClick={() => setTargetPage("mugs")}
-                        >
-                            Кружки
-                        </Button>
+                        <FadeInOnScroll delay={0.4}>
+                            <Button
+                                className="nav_button"
+                                onClick={() => setTargetPage("mugs")}
+                            >
+                                Кружки
+                            </Button>
+                        </FadeInOnScroll>
                     </li>
                     <li>
-                        <Button
-                            className="nav_button"
-                            onClick={() => setTargetPage("projects")}
-                        >
-                            Проекты и конкурсы
-                        </Button>
+                        <FadeInOnScroll delay={0.5}>
+                            <Button
+                                className="nav_button"
+                                onClick={() => setTargetPage("projects")}
+                            >
+                                Проекты и конкурсы
+                            </Button>
+                        </FadeInOnScroll>
                     </li>
                     <li>
-                        <Button
-                            className="nav_button"
-                            onClick={() => setTargetPage("gallery")}
-                        >
-                            Галерея
-                        </Button>
+                        <FadeInOnScroll delay={0.5}>
+                            <Button
+                                className="nav_button"
+                                onClick={() => setTargetPage("gallery")}
+                            >
+                                Галерея
+                            </Button>
+                        </FadeInOnScroll>
                     </li>
                     <li>
-                        <Button className="nav_button" onClick={scrollToFooter}>
-                            Контакты
-                        </Button>
+                        <FadeInOnScroll delay={0.6}>
+                            <Button
+                                className="nav_button"
+                                onClick={scrollToFooter}
+                            >
+                                Контакты
+                            </Button>
+                        </FadeInOnScroll>
                     </li>
                 </ul>
             </nav>
+
             {/* переключить тему */}
-            <Button
-                id="container-night-theme-toggle"
-                onClick={toggleTheme} // Вызываем toggleTheme без анонимной функции
-                style={{ borderWidth: "0px" }}
-            >
-                <img
-                    src={night_theme_button}
-                    alt="Переключить тему"
-                    title="Переключить тему"
-                    // Динамически добавляем класс для поворота
-                    className={isDarkTheme ? "rotate-dark" : "rotate-light"}
-                />
-            </Button>
+            <FadeInOnScroll delay={0.7}>
+                <Button
+                    id="container-night-theme-toggle"
+                    onClick={toggleTheme} // Вызываем toggleTheme без анонимной функции
+                    style={{ borderWidth: "0px" }}
+                >
+                    <img
+                        src={night_theme_button}
+                        alt="Переключить тему"
+                        title="Переключить тему"
+                        // Динамически добавляем класс для поворота
+                        className={isDarkTheme ? "rotate-dark" : "rotate-light"}
+                    />
+                </Button>
+            </FadeInOnScroll>
         </header>
     );
 }
