@@ -41,8 +41,7 @@ export default function ContainerMugsTeacher({imgMugSrc, imgTeacherSrc, titleMug
             {/* контейнер подписи учителей */}
             <FadeInOnScroll_no_container delay={delay_2}>
                 <div
-                    className="container-title-for-imgs-mug-teacher"
-                    style={{ margin: "0 10px" }}
+                    className="container-title-for-imgs-mug-teacher title-teacher"
                 >
                     <h2>{titleTeacher}</h2>
                 </div>

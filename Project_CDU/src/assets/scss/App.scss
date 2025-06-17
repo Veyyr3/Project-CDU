@@ -168,6 +168,11 @@
         text-align: center;
     }
 
+    // отдельно для подписи учителей
+    .title-teacher {
+        margin: 0 10px;
+    }
+
     // спрятать описания картинок
     .container-hiden-discription--mug, .container-hiden-discription--teacher {
         position: absolute;

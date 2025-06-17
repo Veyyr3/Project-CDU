@@ -7,6 +7,13 @@
     /*---------------------------------TECHNICAL---------------------------------*/
     // #region TECHNICAL
         // #region Общие Анимации
+            // отменить анимацию
+            *, *::before, *::after {
+                transition: none !important;
+                animation: none !important;
+                transform: none !important;
+            }
+
             // изначально все элементы спрятаны
             .fade-in-section {
                 transform: none !important;
@@ -29,13 +36,7 @@
             display: block; // изначально
         }
 
-        // отменить анимацию
-        // *, *::before, *::after { /* Применить ко всем элементам, включая псевдоэлементы */
-        //     transition: none !important;
-        //     animation: none !important; /* Отключить CSS-анимации */
-        //     transform: none !important;
-        //     // Дополнительно можно сбросить transform-style, perspective, и т.д. если они используются
-        // }
+        
 
         // для всех кнопок
         button {
@@ -97,4 +98,46 @@
             }
         }
     // #endregion Header
+
+    // #region ContainerMugsTeacher
+        // главный контейнер для фотографий и подписи к ним
+        .main-container-imgs-titles {
+            width: 100%;
+
+            // flex
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            // фото кружков
+            *:nth-child(1) {
+                order: -2;
+            }
+
+            // подпись кружков
+            *:nth-child(3) {
+                order: -1;
+            }
+
+            // для подписей
+            h2 {
+                font-size: 30pt;
+            }
+        }
+        
+        // убрать отступы для фото учителей
+        .container-img--teacher {
+            margin: 0;
+        }
+
+        // отдельно для подписи учителей
+        .title-teacher {
+            margin: 0;
+        }
+        
+        // отдельно текст для кружков
+        .container-hiden-discription--mug p {
+            padding: 30px; 
+        }
+    // #endregion ContainerMugsTeacher
 }
