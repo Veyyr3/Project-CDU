@@ -99,6 +99,35 @@
         }
     // #endregion Header
 
+    // #region MainSection
+        // контейнер с двумя фото
+        .container-2-imgs {
+            width: 100%;
+
+            // flex 
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+ 
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            // 1 фото
+            div:nth-child(1) {
+                width: 100%;
+            }
+
+            // 2 фото
+            div:nth-child(2) {
+                width: 100%;
+            }
+        }
+    // #endregion MainSection
+
     // #region ContainerMugsTeacher
         // главный контейнер для фотографий и подписи к ним
         .main-container-imgs-titles {

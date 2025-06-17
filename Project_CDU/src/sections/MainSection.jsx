@@ -45,7 +45,7 @@ export default function MainSection() {
                 />
             </FadeInOnScroll>
 
-            {/* блок с фото */}
+            {/* блок с 2 фото */}
             <FadeInOnScroll delay={delay_2}>
                 <div className="container-2-imgs">
                     <div>
