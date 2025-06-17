@@ -44,7 +44,7 @@
             font-size: 3rem;
         }
         h3 {
-            font-size: 3rem;
+            font-size: 2rem;
         }
         h4 {
             font-size: 2rem;
@@ -110,6 +110,46 @@
             }
         }
     // #endregion Header
+
+    // #region main
+        main {
+            margin: 2rem 1rem 2rem 1rem;
+        }
+    // #endregion main
+
+    // #region Footer
+        // футер
+        #contacts-footer {
+            // flex
+            display: flex;
+            flex-direction: column;
+        }
+
+        // левая часть
+        .footer-left {
+            width: 100%;
+        }
+
+        // правая часть
+        .footer-right {
+            width: 100%;
+
+            // flex
+            justify-content: center;
+            align-items: center;
+        }
+
+        // разделительная линия
+        .footer-line-between {
+            display: none;
+        }
+
+        // карта
+        .Ymap {
+            width: 100%;
+            aspect-ratio: 16/9;
+        }
+    // #endregion Footer
 
     // #region MainSection
         // контейнер с двумя фото
@@ -179,6 +219,15 @@
         // отдельно текст для кружков
         .container-hiden-discription--mug p {
             padding: 30px; 
+            font-size: 16pt;
+        }
+
+        // спрятанные описания картинок
+        .container-hiden-discription--mug, .container-hiden-discription--teacher {
+            // для текстов
+            p {
+                font-size: clamp(0.75rem, -0.3088rem + 5.2941vw, 3rem);
+            }
         }
     // #endregion ContainerMugsTeacher
 
@@ -197,38 +246,11 @@
         }
     // #endregion ProjectSection
 
-    // #region Footer
-        // футер
-        #contacts-footer {
-            // flex
-            display: flex;
-            flex-direction: column;
+    // #region GallerySection
+        // див с фото
+        .container-imgs {
+            padding: 0 1.2rem 0 1.2rem;
         }
-
-        // левая часть
-        .footer-left {
-            width: 100%;
-        }
-
-        // правая часть
-        .footer-right {
-            width: 100%;
-
-            // flex
-            justify-content: center;
-            align-items: center;
-        }
-
-        // разделительная линия
-        .footer-line-between {
-            display: none;
-        }
-
-        // карта
-        .Ymap {
-            width: 100%;
-            aspect-ratio: 16/9;
-        }
-    // #endregion Footer
+    // #endregion GallerySection
 
 }
