@@ -62,14 +62,9 @@ export default function ProjectSection() {
                     </div>
                 </FadeInOnScroll>
 
-                {/* контейнер для вывода проектов (Для этой же автоматизации) */}
+                {/* контейнер со всеми проектами (Для этой же автоматизации) */}
                 <div
-                    style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        gap: "30px",
-                        padding: "0 100px",
-                    }}
+                    className="container-project-items"
                 >
                     {/* автоматизация вывода проектов */}
                     {text_for_project_item.map((i, index) => {

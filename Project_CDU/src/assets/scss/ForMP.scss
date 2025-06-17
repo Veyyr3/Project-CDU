@@ -36,7 +36,19 @@
             display: block; // изначально
         }
 
-        
+        // задать заголовкам размеры
+        h1 {
+            font-size: 5rem;
+        }
+        h2 {
+            font-size: 3rem;
+        }
+        h3 {
+            font-size: 3rem;
+        }
+        h4 {
+            font-size: 2rem;
+        }
 
         // для всех кнопок
         button {
@@ -170,6 +182,21 @@
         }
     // #endregion ContainerMugsTeacher
 
+    // #region ProjectSection
+        // контейнер с кратким описанием
+        .container-short-dicsription {
+            // для заголовка
+            h3 {
+                font-size: 25pt;
+            }
+        }
+
+        // контейнер со всеми проектами
+        .container-project-items {
+            padding: 0;
+        }
+    // #endregion ProjectSection
+
     // #region Footer
         // футер
         #contacts-footer {
@@ -203,4 +230,5 @@
             aspect-ratio: 16/9;
         }
     // #endregion Footer
+
 }
