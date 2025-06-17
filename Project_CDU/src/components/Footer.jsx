@@ -53,7 +53,7 @@ export default function Footer() {
                                     center: tokmokCoordinates,
                                     zoom: mapZoom,
                                 }}
-                                style={{ width: "600px", height: "200px" }}
+                                className="Ymap"
                             >
                                 <Placemark
                                     geometry={tokmokCoordinates}

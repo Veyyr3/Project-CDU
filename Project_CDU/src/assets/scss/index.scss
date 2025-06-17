@@ -839,6 +839,11 @@ body {
         p {
             color: var(--div-text);
         }
+
+        // выделить
+        strong {
+            font-style: italic;
+        }
     }
 
     // правая часть
@@ -857,5 +862,11 @@ body {
     .footer-line-between {
         border-left: 2px solid var(--div-text);
         margin: 20px 0 20px 0;
+    }
+
+    // карта
+    .Ymap {
+        width: 600px;
+        height: 200px;
     }
 // #endregion Footer

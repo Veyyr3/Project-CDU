@@ -140,4 +140,38 @@
             padding: 30px; 
         }
     // #endregion ContainerMugsTeacher
+
+    // #region Footer
+        // футер
+        #contacts-footer {
+            // flex
+            display: flex;
+            flex-direction: column;
+        }
+
+        // левая часть
+        .footer-left {
+            width: 100%;
+        }
+
+        // правая часть
+        .footer-right {
+            width: 100%;
+
+            // flex
+            justify-content: center;
+            align-items: center;
+        }
+
+        // разделительная линия
+        .footer-line-between {
+            display: none;
+        }
+
+        // карта
+        .Ymap {
+            width: 100%;
+            aspect-ratio: 16/9;
+        }
+    // #endregion Footer
 }
