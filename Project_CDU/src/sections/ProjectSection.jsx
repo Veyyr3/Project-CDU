@@ -69,9 +69,8 @@ export default function ProjectSection() {
                     {/* автоматизация вывода проектов */}
                     {text_for_project_item.map((i, index) => {
                         return (
-                            <FadeInOnScroll delay={delay_1}>
+                            <FadeInOnScroll delay={delay_1} key={index}>
                                 <ProjectItem
-                                    key={index}
                                     imgProjectSrc={i.imgProjectSrc}
                                     dicsImg={i.dicsImg}
                                     title={i.title}

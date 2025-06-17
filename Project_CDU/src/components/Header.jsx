@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom"; // Для http маршрутов
 
 // #region фото
     // Главный логотип сайта
@@ -14,7 +15,9 @@ import { useEffect, useState } from "react";
     import FadeInOnScroll from "../components/forAnimation/FadeInOnScroll";
 // #endregion компоненты
 
-export default function Header({ setTargetPage }) {
+export default function Header() {
+    const navigate = useNavigate(); // Инициализируем useNavigate
+
     // #region useState
         // Состояние для отслеживания текущей темы
         const [isDarkTheme, setIsDarkTheme] = useState(() => {
@@ -76,7 +79,7 @@ export default function Header({ setTargetPage }) {
                             ? () => setShowContainer(false) // если нажали второй раз
                             : () => setShowContainer(true) // если нажали один раз
                     }
-                    class="nav_button but-open-menu-MP"
+                    className="nav_button but-open-menu-MP"
                 >
                     ☰
                 </Button>
@@ -88,51 +91,37 @@ export default function Header({ setTargetPage }) {
                         <ul>
                             <li>
                                 <FadeInOnScroll delay={0.3}>
-                                    <Button
-                                        className="nav_button"
-                                        onClick={() => setTargetPage("main")}
-                                    >
+                                    <Link to="/" className="nav_button">
                                         Главная
-                                    </Button>
+                                    </Link>
                                 </FadeInOnScroll>
                             </li>
                             <li>
                                 <FadeInOnScroll delay={0.4}>
-                                    <Button
-                                        className="nav_button"
-                                        onClick={() => setTargetPage("mugs")}
-                                    >
+                                    <Link to="/mugs" className="nav_button">
                                         Кружки
-                                    </Button>
+                                    </Link>
                                 </FadeInOnScroll>
                             </li>
                             <li>
                                 <FadeInOnScroll delay={0.5}>
-                                    <Button
-                                        className="nav_button"
-                                        onClick={() =>
-                                            setTargetPage("projects")
-                                        }
-                                    >
+                                    <Link to="/projects" className="nav_button">
                                         Проекты и конкурсы
-                                    </Button>
+                                    </Link>
                                 </FadeInOnScroll>
                             </li>
                             <li>
                                 <FadeInOnScroll delay={0.5}>
-                                    <Button
-                                        className="nav_button"
-                                        onClick={() => setTargetPage("gallery")}
-                                    >
+                                    <Link to="/gallery" className="nav_button">
                                         Галерея
-                                    </Button>
+                                    </Link>
                                 </FadeInOnScroll>
                             </li>
                             <li>
                                 <FadeInOnScroll delay={0.6}>
                                     <Button
                                         className="nav_button"
-                                        onClick={scrollToFooter}
+                                        onClick={scrollToFooter} // Пока используем Button для прокрутки
                                     >
                                         Контакты
                                     </Button>
@@ -145,14 +134,13 @@ export default function Header({ setTargetPage }) {
                     <FadeInOnScroll delay={0.7}>
                         <Button
                             id="container-night-theme-toggle"
-                            onClick={toggleTheme} // Вызываем toggleTheme без анонимной функции
+                            onClick={toggleTheme}
                             style={{ borderWidth: "0px" }}
                         >
                             <img
                                 src={night_theme_button}
                                 alt="Переключить тему"
                                 title="Переключить тему"
-                                // Динамически добавляем класс для поворота
                                 className={
                                     isDarkTheme ? "rotate-dark" : "rotate-light"
                                 }
@@ -179,51 +167,56 @@ export default function Header({ setTargetPage }) {
                         <ul>
                             <li>
                                 <FadeInOnScroll delay={0.3}>
-                                    <Button
+                                    <Link
+                                        to="/"
                                         className="nav_button"
-                                        onClick={() => setTargetPage("main")}
+                                        onClick={() => setShowContainer(false)}
                                     >
                                         Главная
-                                    </Button>
+                                    </Link>
                                 </FadeInOnScroll>
                             </li>
                             <li>
                                 <FadeInOnScroll delay={0.4}>
-                                    <Button
+                                    <Link
+                                        to="/mugs"
                                         className="nav_button"
-                                        onClick={() => setTargetPage("mugs")}
+                                        onClick={() => setShowContainer(false)}
                                     >
                                         Кружки
-                                    </Button>
+                                    </Link>
                                 </FadeInOnScroll>
                             </li>
                             <li>
                                 <FadeInOnScroll delay={0.5}>
-                                    <Button
+                                    <Link
+                                        to="/projects"
                                         className="nav_button"
-                                        onClick={() =>
-                                            setTargetPage("projects")
-                                        }
+                                        onClick={() => setShowContainer(false)}
                                     >
                                         Проекты и конкурсы
-                                    </Button>
+                                    </Link>
                                 </FadeInOnScroll>
                             </li>
                             <li>
                                 <FadeInOnScroll delay={0.5}>
-                                    <Button
+                                    <Link
+                                        to="/gallery"
                                         className="nav_button"
-                                        onClick={() => setTargetPage("gallery")}
+                                        onClick={() => setShowContainer(false)}
                                     >
                                         Галерея
-                                    </Button>
+                                    </Link>
                                 </FadeInOnScroll>
                             </li>
                             <li>
                                 <FadeInOnScroll delay={0.6}>
                                     <Button
                                         className="nav_button"
-                                        onClick={scrollToFooter}
+                                        onClick={() => {
+                                            scrollToFooter();
+                                            setShowContainer(false); // Закрываем мобильное меню после прокрутки
+                                        }}
                                     >
                                         Контакты
                                     </Button>
@@ -238,7 +231,7 @@ export default function Header({ setTargetPage }) {
                             display: "flex",
                             alignItems: "center",
                             gap: "10px",
-                            marginTop: '10px'
+                            marginTop: "10px",
                         }}
                     >
                         {/* кнопка переключения темы */}
